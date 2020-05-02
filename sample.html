@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> JavaScript Tutorials</title>
+    <script type="text/javascript">
+      function pattern()
+      {
+        var i,b,j,k;
+        var dig=prompt("Enter the pattern digit","*");
+        document.getElementById("demo").innerHTML ="<b><u>Using For Loops</u></b><br/><br/>";
+        for(i=7;i>=1;i-=1)
+        {
+          for(k=0;k<=7-i;k++)
+                document.getElementById("demo").innerHTML += " &nbsp ";
+
+          for(j=0;j!=(2*i-1);j+=1)
+          {
+              document.getElementById("demo").innerHTML += dig+"\t ";
+          }
+          document.getElementById("demo").innerHTML += "<br>" ;
+        }
+      }
+
+      function fibbonacci(){
+        var i=0,j=1,k;
+        var gits=prompt("Fibonacci Series should be less than:","Enter Digit Here.");
+        document.getElementById("demo").innerHTML =("<b><u>Using While Loops</u></b><br/><br/>");
+
+        while(i<gits){
+          document.getElementById("demo").innerHTML +=(i+"<br/>");
+          k=i+j;
+          i=j;
+          j=k;
+        }
+      }
+
+      function table(){
+        var num=prompt("Enter the Number :","Enter Digit Here.");
+        document.getElementById("demo").innerHTML =("<b><U>Using DO While Loops</U></b><br/></br>");
+        var i=1,prod=1;
+        do{
+          document.getElementById("demo").innerHTML +=num +"&nbsp"+" X " +i+" ="+num*i +"<br/>";
+          i++;
+        }  while(i<=10);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 align=center><b>Demonstration Of Loops Using JavaScript.</b></h1>
+    <button type="button" name="button" onclick="pattern()">Try Building a Pattern.</button>
+    <button type="button" name="button" onclick="fibbonacci()">Try Building a Fibonacci Series.</button>
+    <button type="button" name="button" onclick="table()">Try Building a Table.</button>
+    <p id = "demo"></p>
+  </body>
+</html>
